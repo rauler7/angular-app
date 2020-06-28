@@ -3,3 +3,11 @@ describe('Localhost page loading', () => {
     cy.visit('http://localhost/')
   })
 })
+
+describe('Click a link', () => {
+  it('clicks the link "learn-angular"', () => {
+    cy.visit('localhost')
+
+    cy.get('a[id="learn-angular"]').click()
+  })
+})
